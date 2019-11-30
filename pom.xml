@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.hadoop.hbase-demo</groupId>
+  <artifactId>hbase-demo</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+  <name>hbase_demo</name>
+  <!-- FIXME change it to the project's website -->
+  <url>http://www.example.com</url>
+
+  <properties>
+    <hdfs_version>2.6.0</hdfs_version>
+    <hbase_version>1.2.0</hbase_version>
+  </properties>
+
+  <repositories>
+    <!--Cloudera仓库-->
+    <repository>
+      <id>cloudera</id>
+      <url>https://repository.cloudera.com/artifactory/cloudera-repos/</url>
+    </repository>
+  </repositories>
+
+  <dependencies>
+    <!--依赖本地jar包-->
+    <dependency>
+      <groupId>org.linye.model</groupId>
+      <artifactId>linye</artifactId>
+      <version>1.0</version>
+      <scope>system</scope>
+      <systemPath>${basedir}/lib/org.linye.model-1.0-SNAPSHOT.jar</systemPath>
+    </dependency>
+
+    <!--HBase所需依赖-->
+    <dependency>
+      <groupId>org.apache.hbase</groupId>
+      <artifactId>hbase-client</artifactId>
+      <version>${hbase_version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.hbase</groupId>
+      <artifactId>hbase-server</artifactId>
+      <version>${hbase_version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.hbase</groupId>
+      <artifactId>hbase-common</artifactId>
+      <version>${hbase_version}</version>
+    </dependency>
+
+
+    <!--HDFS所需依赖信息-->
+    <dependency>
+    <groupId>org.apache.hadoop</groupId>
+    <artifactId>hadoop-hdfs</artifactId>
+    <version>${hdfs_version}</version>
+  </dependency>
+    <dependency>
+      <groupId>org.apache.hadoop</groupId>
+      <artifactId>hadoop-client</artifactId>
+      <version>${hdfs_version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.hadoop</groupId>
+      <artifactId>hadoop-common</artifactId>
+      <version>${hdfs_version}</version>
+    </dependency>
+
+    <!--单元测试-->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+</project>
